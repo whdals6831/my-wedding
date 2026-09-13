@@ -1,6 +1,6 @@
-/* 바로 위 오시는 길과 이어지는 내용이라 위 여백을 줄인다 */
+/* 오시는 길의 하단 여백만 남겨, 위 여백이 이 섹션의 하단 여백(--section-py)과 같아지게 한다 */
 .section.section {
-  padding-top: calc(var(--section-py) * 0.6);
+  padding-top: 0;
 }
 
 .image {
