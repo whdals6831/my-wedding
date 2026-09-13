@@ -69,6 +69,20 @@ export function daysUntil(target: KstDate, now: KstDate = toKst(new Date())): nu
   return Math.round((t - n) / DAY_MS);
 }
 
+/** 날짜가 매년 같은 양력 공휴일 (설날·추석·부처님오신날 같은 음력 공휴일은 해마다 달라 제외) */
+const SOLAR_HOLIDAYS: Record<string, string> = {
+  '1-1': '신정',
+  '3-1': '삼일절',
+  '5-5': '어린이날',
+  '6-6': '현충일',
+  '8-15': '광복절',
+  '10-3': '개천절',
+  '10-9': '한글날',
+  '12-25': '성탄절',
+};
+
+export const holidayName = (month: number, day: number): string | undefined => SOLAR_HOLIDAYS[`${month}-${day}`];
+
 /** 달력 칸 배열. 앞쪽 빈 칸은 null */
 export function monthGrid(year: number, month: number): (number | null)[] {
   const leadingBlanks = new Date(Date.UTC(year, month - 1, 1)).getUTCDay();

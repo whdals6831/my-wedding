@@ -55,6 +55,16 @@
   color: var(--sunday);
 }
 
+.holiday {
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  font-size: 0.625rem;
+  line-height: 1;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
 .wedding {
   font-weight: 700;
   color: #fff;

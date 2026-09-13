@@ -7,6 +7,7 @@ import {
   daysUntil,
   formatDateKo,
   formatTimeKo,
+  holidayName,
   monthGrid,
   monthNameEn,
   toKst,
@@ -34,19 +35,24 @@ export function Calendar() {
               {weekday}
             </span>
           ))}
-          {cells.map((day, index) =>
-            day === null ? (
-              <span key={`blank-${index}`} />
-            ) : (
+          {cells.map((day, index) => {
+            if (day === null) return <span key={`blank-${index}`} />;
+            const holiday = holidayName(date.month, day);
+            return (
               <span
                 key={day}
-                className={cx(styles.day, index % 7 === 0 && styles.sunday, day === date.day && styles.wedding)}
+                className={cx(
+                  styles.day,
+                  (index % 7 === 0 || holiday) && styles.sunday,
+                  day === date.day && styles.wedding,
+                )}
               >
                 {day}
+                {holiday && <span className={styles.holiday}>{holiday}</span>}
                 {day === date.day && <span className="sr-only"> 결혼식</span>}
               </span>
-            ),
-          )}
+            );
+          })}
         </div>
       </Reveal>
 
