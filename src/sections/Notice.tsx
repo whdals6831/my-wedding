@@ -10,7 +10,7 @@ export function Notice() {
   const { title, image, text } = wedding.notice;
 
   return (
-    <Section enTitle="Notice" title={title}>
+    <Section enTitle="Notice" title={title} divider={false} className={styles.section}>
       {image && (
         <Reveal className={styles.image}>
           <Photo src={getPhoto(image)} alt={title} ratio="4 / 3" label="NOTICE" className={styles.photo} />

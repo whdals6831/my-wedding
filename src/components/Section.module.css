@@ -10,7 +10,7 @@
 }
 
 /* 같은 배경의 섹션이 이어질 때만 가운데 짧은 구분선 */
-.section[data-tone='default'] + .section[data-tone='default']::before {
+.section[data-tone='default'] + .section[data-tone='default'][data-divider='true']::before {
   content: '';
   position: absolute;
   top: 0;

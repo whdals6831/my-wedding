@@ -1,3 +1,8 @@
+/* 바로 위 오시는 길과 이어지는 내용이라 위 여백을 줄인다 */
+.section.section {
+  padding-top: calc(var(--section-py) * 0.6);
+}
+
 .image {
   margin-bottom: var(--sp-6);
 }
