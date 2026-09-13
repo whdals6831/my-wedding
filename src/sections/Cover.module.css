@@ -64,7 +64,7 @@
 
 .venue {
   margin-top: var(--sp-1);
-  color: var(--text-sub);
+  color: var(--text);
 }
 
 @keyframes fade-up {

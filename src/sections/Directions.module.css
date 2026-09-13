@@ -13,6 +13,7 @@
 .item {
   display: grid;
   grid-template-columns: 4.5rem minmax(0, 1fr);
+  align-items: center;
   gap: var(--sp-3);
   padding-block: var(--sp-5);
   border-top: 1px solid var(--line);
@@ -26,6 +27,7 @@
   font-size: var(--fs-sm);
   font-weight: 700;
   line-height: 1.75;
+  text-align: center;
   color: var(--accent-text);
 }
 

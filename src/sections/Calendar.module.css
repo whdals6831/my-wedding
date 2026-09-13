@@ -1,10 +1,10 @@
-.when {
+.when,
+.time {
   font-size: var(--fs-md);
 }
 
 .time {
   margin-top: 2px;
-  color: var(--text-sub);
 }
 
 .calendar {
@@ -75,7 +75,8 @@
   flex-direction: column;
   align-items: center;
   gap: var(--sp-3);
-  margin-top: var(--sp-8);
+  /* 달력 아래 선과 다음 섹션 구분선 사이 가운데에 오도록 섹션 하단 여백과 같게 */
+  margin-top: var(--section-py);
 }
 
 .badge {
