@@ -1,0 +1,104 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgb(40 28 28 / 45%);
+  animation: fade-in 0.25s ease both;
+}
+
+.panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 85dvh;
+  padding-bottom: env(safe-area-inset-bottom);
+  border-radius: 20px 20px 0 0;
+  background: var(--bg);
+  outline: none;
+  animation: slide-up 0.32s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@media (min-width: 481px) {
+  .root {
+    align-items: center;
+    padding: var(--sp-4);
+  }
+
+  .panel {
+    max-width: var(--max-w);
+    border-radius: 20px;
+    padding-bottom: 0;
+    animation-name: pop-in;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-5) var(--sp-3) var(--sp-3) var(--sp-5);
+  border-bottom: 1px solid var(--line);
+}
+
+.title {
+  font-size: var(--fs-md);
+  font-weight: 700;
+}
+
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: var(--text-sub);
+}
+
+@media (hover: hover) {
+  .close:hover {
+    background: var(--bg-tint);
+  }
+}
+
+.body {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--sp-2) var(--sp-5) var(--sp-6);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop,
+  .panel {
+    animation: none;
+  }
+}

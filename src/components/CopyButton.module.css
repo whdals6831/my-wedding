@@ -1,0 +1,32 @@
+.chip {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 4px;
+  min-height: 34px;
+  padding-inline: 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg);
+  font-size: var(--fs-xs);
+  color: var(--text-sub);
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+}
+
+.chip:active {
+  background: var(--bg-tint);
+}
+
+@media (hover: hover) {
+  .chip:hover {
+    border-color: var(--accent);
+    color: var(--accent-text);
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 1.1em;
+  height: 1.1em;
+}

@@ -1,0 +1,34 @@
+.map {
+  margin-bottom: var(--sp-8);
+}
+
+.mapPhoto {
+  border-radius: var(--radius);
+}
+
+.items {
+  text-align: left;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: var(--sp-3);
+  padding-block: var(--sp-5);
+  border-top: 1px solid var(--line);
+}
+
+.item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.itemTitle {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  line-height: 1.75;
+  color: var(--accent-text);
+}
+
+.lines {
+  line-height: 1.75;
+}

@@ -1,0 +1,14 @@
+.image {
+  margin-bottom: var(--sp-6);
+}
+
+.photo {
+  border-radius: var(--radius);
+}
+
+.box {
+  padding: var(--sp-6) var(--sp-5);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+  line-height: var(--lh-body);
+}

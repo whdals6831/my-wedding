@@ -1,0 +1,15 @@
+.text {
+  line-height: var(--lh-body);
+}
+
+.sign {
+  margin-top: var(--sp-10);
+  font-size: var(--fs-md);
+  letter-spacing: 0.06em;
+}
+
+.heart {
+  margin-inline: 0.3em;
+  font-size: 0.8em;
+  color: var(--accent);
+}

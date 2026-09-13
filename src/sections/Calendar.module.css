@@ -1,0 +1,93 @@
+.when {
+  font-size: var(--fs-md);
+}
+
+.time {
+  margin-top: 2px;
+  color: var(--text-sub);
+}
+
+.calendar {
+  max-width: 340px;
+  margin: var(--sp-8) auto 0;
+  padding-block: var(--sp-6);
+  border-block: 1px solid var(--line);
+}
+
+.month {
+  margin-bottom: var(--sp-4);
+  font-family: var(--font-en);
+  font-size: var(--fs-lg);
+  font-style: italic;
+  color: var(--accent-text);
+}
+
+.year {
+  font-size: var(--fs-sm);
+  font-style: normal;
+  letter-spacing: 0.1em;
+  color: var(--text-sub);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  row-gap: var(--sp-1);
+}
+
+.weekday {
+  padding-bottom: var(--sp-2);
+  font-size: var(--fs-xs);
+  color: var(--text-sub);
+}
+
+.day {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  font-size: 0.9375rem;
+  isolation: isolate;
+}
+
+.sunday {
+  color: var(--sunday);
+}
+
+.wedding {
+  font-weight: 700;
+  color: #fff;
+}
+
+.wedding::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: min(2.25rem, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--accent-text);
+}
+
+.dday {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-top: var(--sp-8);
+}
+
+.badge {
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  font-family: var(--font-en);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.06em;
+  color: var(--accent-text);
+}
+
+.count {
+  color: var(--accent-text);
+}

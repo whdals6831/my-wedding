@@ -1,0 +1,78 @@
+.family {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  font-size: var(--fs-md);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  column-gap: 0.45em;
+}
+
+.parents,
+.relation,
+.child {
+  white-space: nowrap;
+}
+
+.dot {
+  margin-inline: 0.3em;
+  color: var(--text-sub);
+}
+
+.deceased {
+  font-size: 0.85em;
+  color: var(--text-sub);
+}
+
+.relation {
+  font-size: var(--fs-sm);
+  color: var(--text-sub);
+}
+
+.child {
+  font-weight: 700;
+}
+
+.block {
+  margin-top: var(--sp-8);
+}
+
+.venueName {
+  font-size: var(--fs-lg);
+}
+
+.hall {
+  margin-top: 2px;
+  color: var(--text-sub);
+}
+
+.when {
+  margin-top: var(--sp-3);
+  font-size: var(--fs-sm);
+  color: var(--text-sub);
+}
+
+.address {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2) var(--sp-3);
+  margin-top: var(--sp-5);
+}
+
+.nav {
+  margin-top: var(--sp-6);
+}
+
+.tel {
+  font-size: var(--fs-sm);
+  color: var(--text-sub);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}

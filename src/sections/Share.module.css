@@ -1,0 +1,22 @@
+.thanks {
+  line-height: var(--lh-body);
+  color: var(--text-sub);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-top: var(--sp-8);
+}
+
+.footer {
+  padding: var(--sp-6) var(--section-px) calc(var(--sp-6) + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line);
+  background: var(--bg-soft);
+  text-align: center;
+  font-family: var(--font-en);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.15em;
+  color: var(--text-sub);
+}

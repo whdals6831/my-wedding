@@ -1,0 +1,44 @@
+.section {
+  position: relative;
+  padding-block: var(--section-py);
+  padding-inline: var(--section-px);
+  text-align: center;
+}
+
+.section[data-tone='soft'] {
+  background: var(--bg-soft);
+}
+
+/* 같은 배경의 섹션이 이어질 때만 가운데 짧은 구분선 */
+.section[data-tone='default'] + .section[data-tone='default']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 48px;
+  height: 1px;
+  background: var(--line);
+  transform: translateX(-50%);
+}
+
+.heading {
+  margin-bottom: var(--sp-10);
+}
+
+.enTitle {
+  font-family: var(--font-en);
+  font-size: var(--fs-en-title);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+
+.title {
+  margin-top: var(--sp-2);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--text-sub);
+}

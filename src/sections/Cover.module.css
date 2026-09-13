@@ -1,0 +1,79 @@
+.cover {
+  padding-bottom: var(--sp-16);
+  text-align: center;
+}
+
+.photoWrap {
+  position: relative;
+}
+
+/* 사진 아래쪽을 배경색으로 부드럽게 녹인다 */
+.photoWrap::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  height: 18%;
+  background: linear-gradient(to bottom, rgb(255 255 255 / 0%), var(--bg));
+  pointer-events: none;
+}
+
+.photo {
+  max-height: 88svh;
+}
+
+/* 가로 모드 휴대폰에서 사진이 화면을 다 덮지 않게 */
+@media (orientation: landscape) and (max-height: 520px) {
+  .photo {
+    max-height: 75svh;
+  }
+}
+
+.text {
+  padding: var(--sp-8) var(--section-px) 0;
+  animation: fade-up 1.2s 0.3s ease both;
+}
+
+.names {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  font-size: var(--fs-xl);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.amp {
+  font-family: var(--font-en);
+  font-size: 1.2em;
+  font-style: italic;
+  color: var(--accent);
+}
+
+.date {
+  margin-top: var(--sp-4);
+  font-family: var(--font-en);
+  font-size: var(--fs-base);
+  letter-spacing: 0.1em;
+  color: var(--text-sub);
+}
+
+.venue {
+  margin-top: var(--sp-1);
+  color: var(--text-sub);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text {
+    animation: none;
+  }
+}

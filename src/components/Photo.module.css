@@ -1,0 +1,38 @@
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  background: var(--ph-bg);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  color: var(--ph-icon);
+  background: linear-gradient(145deg, var(--ph-bg) 0%, #fbf4f3 100%);
+}
+
+.icon {
+  width: clamp(18px, 16%, 44px);
+  height: auto;
+}
+
+.label {
+  font-family: var(--font-en);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.2em;
+}

@@ -1,0 +1,52 @@
+:root {
+  /* color */
+  --page-bg: #f3e9e7;
+  --bg: #ffffff;
+  --bg-soft: #fbf6f5;
+  --bg-tint: #faeeee;
+  --accent: #c98b8b;
+  --accent-soft: #f2dcdc;
+  --accent-text: #9e5e62;
+  --text: #4a4040;
+  --text-sub: #7d7070;
+  --sunday: #c0504d;
+  --line: #eadada;
+  --ph-bg: #f6eceb;
+  --ph-icon: #d9b8b8;
+
+  /* typography */
+  --font-ko: 'Gowun Batang', 'Nanum Myeongjo', 'AppleMyungjo', serif;
+  --font-en: 'Playfair Display', 'Times New Roman', serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.0625rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: clamp(1.375rem, 1.15rem + 1vw, 1.625rem);
+  --fs-en-title: clamp(1.625rem, 1.4rem + 1vw, 1.875rem);
+  --lh-body: 1.9;
+
+  /* spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --section-py: clamp(64px, 18vw, 88px);
+  --section-px: clamp(20px, 7vw, 28px);
+
+  /* shape */
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 4px 20px rgb(180 120 120 / 12%);
+  --shadow-card: 0 10px 50px rgb(150 100 100 / 14%);
+
+  /* layout */
+  --max-w: 430px;
+}
