@@ -56,6 +56,8 @@
   margin-top: var(--sp-4);
   font-family: var(--font-en);
   font-size: var(--fs-base);
+  /* Playfair 기본 숫자는 소문자 높이(old-style)라 작아 보이므로 대문자 높이로 맞춘다 */
+  font-variant-numeric: lining-nums;
   letter-spacing: 0.1em;
   color: var(--text-sub);
 }

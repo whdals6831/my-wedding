@@ -22,3 +22,7 @@
 .source::before {
   content: '— ';
 }
+
+.source::after {
+  content: ' —';
+}
