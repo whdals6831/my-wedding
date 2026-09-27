@@ -1,4 +1,6 @@
 :root {
+  color-scheme: only light; /* 브라우저 자동 다크모드 차단 */
+
   /* color */
   --page-bg: #f3e9e7;
   --bg: #ffffff;
