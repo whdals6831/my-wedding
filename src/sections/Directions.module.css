@@ -34,3 +34,27 @@
 .lines {
   line-height: 1.75;
 }
+
+/* 분류를 따로 세워, 넘어간 줄이 분류 뒤에 맞춰 정렬되게 한다 */
+.labeled {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 0.4em;
+}
+
+.label {
+  font-weight: 700;
+}
+
+/* 예식장 약도의 간선·지선·광역 색 */
+.label[data-tone='blue'] {
+  color: #1a5fb0;
+}
+
+.label[data-tone='green'] {
+  color: #1a7a34;
+}
+
+.label[data-tone='red'] {
+  color: #d63027;
+}

@@ -35,9 +35,17 @@ export interface Account {
   number: string;
 }
 
+/** 분류가 붙는 줄. 길어서 넘어가면 본문은 분류 뒤에 맞춰 정렬된다 */
+export interface DirectionLine {
+  label: string;
+  text: string;
+  /** 분류 글자색 (버스 간선·지선·광역 구분용) */
+  tone?: 'blue' | 'green' | 'red';
+}
+
 export interface DirectionItem {
   title: string;
-  lines: string[];
+  lines: (string | DirectionLine)[];
 }
 
 export interface WeddingConfig {

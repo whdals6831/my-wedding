@@ -27,9 +27,18 @@ export function Directions() {
           <Reveal key={item.title} className={styles.item}>
             <h3 className={styles.itemTitle}>{item.title}</h3>
             <ul className={styles.lines}>
-              {item.lines.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
+              {item.lines.map((line) =>
+                typeof line === 'string' ? (
+                  <li key={line}>{line}</li>
+                ) : (
+                  <li key={line.label} className={styles.labeled}>
+                    <span className={styles.label} data-tone={line.tone}>
+                      {line.label}
+                    </span>
+                    <span>{line.text}</span>
+                  </li>
+                ),
+              )}
             </ul>
           </Reveal>
         ))}

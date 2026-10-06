@@ -17,7 +17,6 @@ export const wedding: WeddingConfig = {
     'calendar',
     'location',
     'directions',
-    'notice',
     'gallery',
     'accounts',
     'share',
@@ -72,15 +71,18 @@ export const wedding: WeddingConfig = {
   },
 
   directions: {
-    mapImage: 'directions-map.jpg',
+    mapImage: 'directions-map.webp',
     items: [
-      {
-        title: '지하철',
-        lines: ['2·5호선 충정로역 4번 출구 도보 3분', '1·4호선 서울역 도보 10분'],
-      },
+      { title: '지하철', lines: ['2·5호선 충정로역 4번 출구 도보 3분'] },
+      { title: '셔틀버스', lines: ['서울역 서부 롯데마트 앞 승차', '10분 간격 운행'] },
       {
         title: '버스',
-        lines: ['충정로역(종근당) 하차', '간선 172, 472, 602, 603', '지선 7011, 7013, 7017'],
+        lines: [
+          '한국경제신문사·충정로역 하차',
+          { label: '간선', tone: 'blue', text: '370, 603, 172, 472, 700, 742, 271, 273, 600, 602' },
+          { label: '지선', tone: 'green', text: '7011, 7017, 7013A·B, 1002' },
+          { label: '광역', tone: 'red', text: '1004, 8600, G6005 (김포)' },
+        ],
       },
       { title: '주차', lines: ['한국경제신문사빌딩 지하 주차장', '하객 2시간 무료'] },
     ],
