@@ -51,6 +51,8 @@ export interface WeddingConfig {
   dateTime: string;
   venue: {
     name: string;
+    /** 지도 앱에서 검색어·도착지로 쓸 이름. 없으면 name 사용 */
+    mapName?: string;
     hall: string;
     address: string;
     tel?: string;

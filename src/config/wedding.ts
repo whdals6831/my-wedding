@@ -46,6 +46,7 @@ export const wedding: WeddingConfig = {
 
   venue: {
     name: '루이비스웨딩홀',
+    mapName: '루이비스 웨딩홀 중구점',
     hall: '한국경제신문사빌딩 18층 다산홀',
     address: '서울 중구 청파로 463 (중림동 441)',
     tel: '02-312-6800',

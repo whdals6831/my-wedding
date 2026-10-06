@@ -51,7 +51,7 @@ export function openKakaoMap({ name, lat, lng }: Destination) {
   openWeb(`https://map.kakao.com/link/to/${encodeURIComponent(name.replaceAll(',', ' '))},${lat},${lng}`);
 }
 
-/** 티맵은 웹 버전이 없어 모바일에서만 노출 */
+/** 티맵은 웹 버전이 없어 모바일에서만 열 수 있다 */
 export const isTmapAvailable = isMobile;
 
 export function openTmap({ name, lat, lng }: Destination) {

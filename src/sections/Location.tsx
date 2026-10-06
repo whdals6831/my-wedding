@@ -31,7 +31,7 @@ export function Location() {
       </Reveal>
 
       <Reveal className={styles.nav}>
-        <NavButtons destination={{ name: venue.name, lat: venue.lat, lng: venue.lng }} />
+        <NavButtons destination={{ name: venue.mapName ?? venue.name, lat: venue.lat, lng: venue.lng }} />
       </Reveal>
 
       {venue.tel && (
