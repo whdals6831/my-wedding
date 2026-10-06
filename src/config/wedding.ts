@@ -13,14 +13,13 @@ export const wedding: WeddingConfig = {
 
   sections: [
     'cover',
-    'intro',
-    'calendar',
-    'weddingInfo',
     'greeting',
+    'calendar',
+    'location',
     'directions',
     'notice',
-    'accounts',
     'gallery',
+    'accounts',
     'share',
   ],
 

@@ -1,13 +1,13 @@
 export type SectionKey =
   | 'cover'
-  | 'intro'
-  | 'calendar'
-  | 'weddingInfo'
   | 'greeting'
+  | 'calendar'
+  | 'location'
   | 'directions'
   | 'notice'
-  | 'accounts'
+  | 'intro'
   | 'gallery'
+  | 'accounts'
   | 'share';
 
 export interface Parent {

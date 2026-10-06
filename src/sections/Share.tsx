@@ -32,7 +32,7 @@ export function Share() {
 
   return (
     <>
-      <Section enTitle="Thank you" tone="soft">
+      <Section enTitle="Thank you">
         <Reveal>
           <p className={styles.thanks}>
             저희의 새로운 시작을 함께해 주셔서
