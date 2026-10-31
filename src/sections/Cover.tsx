@@ -11,7 +11,7 @@ export function Cover() {
 
   return (
     <header className={styles.cover}>
-      {/* 타자기로 친 듯한 영문 정보. 사진 왼쪽 끝에 맞춰 왼쪽 정렬 */}
+      {/* 타자기로 친 듯한 영문 정보 */}
       <div className={styles.typed}>
         <p>
           {groom.en.lastName} {groom.en.firstName} &amp; {bride.en.lastName} {bride.en.firstName}

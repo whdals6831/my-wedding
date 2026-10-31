@@ -23,7 +23,6 @@
   font-family: var(--font-mono);
   font-size: clamp(0.8125rem, 0.7rem + 0.5vw, 0.9375rem);
   line-height: 1.5;
-  text-align: left;
   color: var(--text);
   animation: fade-up 1.2s 0.2s ease both;
 }

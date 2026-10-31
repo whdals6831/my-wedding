@@ -27,3 +27,6 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+# 청첩장 사진 원본 (웹용으로 줄인 파일만 src/assets 에 넣는다)
+모청 사진/
