@@ -22,7 +22,8 @@
   /* 자간을 넓혀 쓰는 영문 대문자 */
   --font-sans: 'Jost', 'Futura', 'Helvetica Neue', sans-serif;
   /* 영문 필기체 */
-  --font-script: 'Allura', cursive;
+  /* 붓으로 쓴 서명 같은 필기체 */
+  --font-script: 'Ms Madi', cursive;
   --fs-xs: 0.75rem;
   --fs-sm: 0.875rem;
   --fs-base: 1rem;
