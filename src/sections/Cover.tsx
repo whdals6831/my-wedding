@@ -1,4 +1,3 @@
-import { PetalCanvas } from '../components/PetalCanvas';
 import { Photo } from '../components/Photo';
 import { wedding } from '../config/wedding';
 import { formatDateTimeDot, toKst } from '../lib/date';
@@ -11,26 +10,32 @@ export function Cover() {
 
   return (
     <header className={styles.cover}>
-      {/* 타자기로 친 듯한 영문 정보 */}
-      <div className={styles.typed}>
-        <p>
-          {groom.en.lastName} {groom.en.firstName} &amp; {bride.en.lastName} {bride.en.firstName}
-        </p>
-        <p>{formatDateTimeDot(date)}</p>
-        <p>{venue.enName}</p>
-      </div>
+      <Photo
+        className={styles.photo}
+        src={getPhoto(cover.photo)}
+        alt={`${groom.firstName} ♥ ${bride.firstName} 웨딩 사진`}
+        ratio="auto"
+        label="MAIN PHOTO"
+        priority
+      />
 
-      <div className={styles.photo}>
-        <Photo
-          src={getPhoto(cover.photo)}
-          alt={`${groom.firstName} ♥ ${bride.firstName} 웨딩 사진`}
-          ratio="3 / 4"
-          label="MAIN PHOTO"
-          priority
-        />
-      </div>
+      {/* 사진 한가운데 필기체 문구 */}
+      <p className={styles.script}>
+        We&rsquo;re getting
+        <br />
+        married
+      </p>
 
-      <div className={styles.text}>
+      <div className={styles.bottom}>
+        {/* 타자기로 친 듯한 영문 정보 */}
+        <div className={styles.typed}>
+          <p>
+            {groom.en.lastName} {groom.en.firstName} &amp; {bride.en.lastName} {bride.en.firstName}
+          </p>
+          <p>{formatDateTimeDot(date)}</p>
+          <p>{venue.enName}</p>
+        </div>
+
         <h1 className={styles.names}>
           <span>{groom.firstName}</span>
           <span className={styles.amp} aria-hidden="true">
@@ -41,8 +46,6 @@ export function Cover() {
         </h1>
         <p className={styles.venue}>{venue.name}</p>
       </div>
-
-      {cover.petals && <PetalCanvas />}
     </header>
   );
 }

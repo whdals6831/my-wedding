@@ -74,7 +74,6 @@ export interface WeddingConfig {
   cover: {
     /** src/assets/photos/ 안의 파일명 */
     photo?: string;
-    petals: boolean;
   };
   intro: {
     text: string;

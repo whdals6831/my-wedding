@@ -58,7 +58,6 @@ export const wedding: WeddingConfig = {
 
   cover: {
     photo: 'main.webp',
-    petals: true,
   },
 
   intro: {

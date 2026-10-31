@@ -1,14 +1,13 @@
-/* 첫 화면 = 청첩장 앞면. 넉넉한 여백 가운데 작은 사진 한 장 */
+/* 첫 화면. 사진이 화면을 가득 채우고 글씨는 사진 위에 먹색으로 얹는다 */
 .cover {
-  --frame-w: min(76%, 39svh);
-
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   min-height: 100svh;
-  padding: var(--sp-16) var(--section-px);
+  overflow: hidden;
   text-align: center;
+  color: var(--text);
 }
 
 @media (min-width: 481px) {
@@ -17,24 +16,61 @@
   }
 }
 
+/* Photo 컴포넌트 기본값(position: relative)보다 우선하도록 선택자를 한 단계 높인다 */
+.cover .photo {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+
+.cover .photo img {
+  /* 폭이 잘릴 때는 두 사람이 가운데 오도록, 높이가 잘릴 때는 얼굴이 남도록 */
+  object-position: 48% 20%;
+}
+
+/* 아래쪽 글씨가 잘 읽히도록 사진 끝을 종이색으로 살짝 바랜다 */
+.cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgb(255 255 255 / 72%) 0%,
+    rgb(255 255 255 / 40%) 18%,
+    rgb(255 255 255 / 0%) 38%
+  );
+  pointer-events: none;
+}
+
+.script,
+.bottom {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 14px rgb(255 255 255 / 55%);
+}
+
+.script {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  translate: 0 -50%;
+  font-family: var(--font-script);
+  font-size: clamp(3.5rem, 2.6rem + 4.5vw, 4.25rem);
+  line-height: 1.05;
+  color: rgb(31 31 31 / 90%);
+  animation: fade-up 1.6s 0.4s ease both;
+}
+
+.bottom {
+  padding: var(--sp-12) var(--section-px) max(var(--sp-12), env(safe-area-inset-bottom));
+  animation: fade-up 1.2s 0.9s ease both;
+}
+
 .typed {
-  width: var(--frame-w);
-  margin: 0 auto var(--sp-8);
   font-family: var(--font-mono);
   font-size: clamp(0.8125rem, 0.7rem + 0.5vw, 0.9375rem);
   line-height: 1.5;
-  color: var(--text);
-  animation: fade-up 1.2s 0.2s ease both;
-}
-
-.photo {
-  width: var(--frame-w);
-  margin-inline: auto;
-}
-
-.text {
-  margin-top: var(--sp-8);
-  animation: fade-up 1.2s 0.5s ease both;
 }
 
 .names {
@@ -43,6 +79,7 @@
   align-items: baseline;
   justify-content: center;
   gap: var(--sp-3);
+  margin-top: var(--sp-6);
   font-size: var(--fs-lg);
   font-weight: 400;
   letter-spacing: 0.12em;
@@ -59,7 +96,7 @@
   margin-top: var(--sp-2);
   font-size: var(--fs-sm);
   letter-spacing: 0.08em;
-  color: var(--text-sub);
+  color: #4a4a4a;
 }
 
 @keyframes fade-up {
@@ -70,8 +107,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .typed,
-  .text {
+  .script,
+  .bottom {
     animation: none;
   }
 }
