@@ -28,16 +28,19 @@
   object-position: 48% 20%;
 }
 
-/* 아래쪽 글씨가 잘 읽히도록 사진 끝을 종이색으로 살짝 바랜다 */
+/* 아래쪽 글씨가 잘 읽히도록 사진 끝을 종이색으로 바래고,
+   맨 아래는 종이색 그대로 끝나 다음 섹션과 경계 없이 이어지게 한다 */
 .cover::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to top,
-    rgb(255 255 255 / 72%) 0%,
-    rgb(255 255 255 / 40%) 14%,
-    rgb(255 255 255 / 0%) 30%
+    var(--bg) 0%,
+    rgb(255 255 255 / 90%) 7%,
+    rgb(255 255 255 / 66%) 15%,
+    rgb(255 255 255 / 34%) 25%,
+    rgb(255 255 255 / 0%) 38%
   );
   pointer-events: none;
 }
