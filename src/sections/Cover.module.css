@@ -36,14 +36,14 @@
   background: linear-gradient(
     to top,
     rgb(255 255 255 / 72%) 0%,
-    rgb(255 255 255 / 40%) 18%,
-    rgb(255 255 255 / 0%) 38%
+    rgb(255 255 255 / 40%) 14%,
+    rgb(255 255 255 / 0%) 30%
   );
   pointer-events: none;
 }
 
 .script,
-.bottom {
+.typed {
   position: relative;
   z-index: 1;
   text-shadow: 0 0 14px rgb(255 255 255 / 55%);
@@ -51,52 +51,24 @@
 
 .script {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 0;
   right: 0;
   translate: 0 -50%;
   font-family: var(--font-script);
   font-size: clamp(3.5rem, 2.6rem + 4.5vw, 4.25rem);
+  font-weight: 400;
   line-height: 1.05;
   color: rgb(31 31 31 / 90%);
   animation: fade-up 1.6s 0.4s ease both;
 }
 
-.bottom {
-  padding: var(--sp-12) var(--section-px) max(var(--sp-12), env(safe-area-inset-bottom));
-  animation: fade-up 1.2s 0.9s ease both;
-}
-
 .typed {
+  padding: var(--sp-12) var(--section-px) max(var(--sp-12), env(safe-area-inset-bottom));
   font-family: var(--font-mono);
   font-size: clamp(0.8125rem, 0.7rem + 0.5vw, 0.9375rem);
   line-height: 1.5;
-}
-
-.names {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: center;
-  gap: var(--sp-3);
-  margin-top: var(--sp-6);
-  font-size: var(--fs-lg);
-  font-weight: 400;
-  letter-spacing: 0.12em;
-}
-
-.amp {
-  font-family: var(--font-script);
-  font-size: 1.5em;
-  line-height: 1;
-  letter-spacing: 0;
-}
-
-.venue {
-  margin-top: var(--sp-2);
-  font-size: var(--fs-sm);
-  letter-spacing: 0.08em;
-  color: #4a4a4a;
+  animation: fade-up 1.2s 0.9s ease both;
 }
 
 @keyframes fade-up {
@@ -108,7 +80,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .script,
-  .bottom {
+  .typed {
     animation: none;
   }
 }

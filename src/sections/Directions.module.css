@@ -35,10 +35,12 @@
   line-height: 1.75;
 }
 
-/* 분류를 따로 세워, 넘어간 줄이 분류 뒤에 맞춰 정렬되게 한다 */
+/* 분류를 따로 세워, 넘어간 줄이 분류 뒤에 맞춰 정렬되게 한다.
+   번호가 여러 줄이면 분류는 번호 묶음의 세로 가운데에 온다 */
 .labeled {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
   column-gap: 0.4em;
 }
 

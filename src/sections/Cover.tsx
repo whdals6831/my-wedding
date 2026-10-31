@@ -19,32 +19,20 @@ export function Cover() {
         priority
       />
 
-      {/* 사진 한가운데 필기체 문구 */}
-      <p className={styles.script}>
+      {/* 사진 가운데보다 조금 아래, 필기체 문구 */}
+      <h1 className={styles.script}>
         We&rsquo;re getting
         <br />
         married
-      </p>
+      </h1>
 
-      <div className={styles.bottom}>
-        {/* 타자기로 친 듯한 영문 정보 */}
-        <div className={styles.typed}>
-          <p>
-            {groom.en.lastName} {groom.en.firstName} &amp; {bride.en.lastName} {bride.en.firstName}
-          </p>
-          <p>{formatDateTimeDot(date)}</p>
-          <p>{venue.enName}</p>
-        </div>
-
-        <h1 className={styles.names}>
-          <span>{groom.firstName}</span>
-          <span className={styles.amp} aria-hidden="true">
-            &amp;
-          </span>
-          <span className="sr-only">그리고</span>
-          <span>{bride.firstName}</span>
-        </h1>
-        <p className={styles.venue}>{venue.name}</p>
+      {/* 타자기로 친 듯한 영문 정보 */}
+      <div className={styles.typed}>
+        <p>
+          {groom.en.lastName} {groom.en.firstName} &amp; {bride.en.lastName} {bride.en.firstName}
+        </p>
+        <p>{formatDateTimeDot(date)}</p>
+        <p>{venue.enName}</p>
       </div>
     </header>
   );

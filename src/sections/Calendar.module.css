@@ -71,14 +71,21 @@
   color: #fff;
 }
 
+/* 결혼식 날짜 뒤 하트. 색은 background로 정하고 모양은 마스크로 자른다 */
 .wedding::before {
+  --heart: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='2 3 20 18.35'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+
   content: '';
   position: absolute;
   z-index: -1;
-  width: min(2.25rem, 100%);
-  aspect-ratio: 1;
-  border-radius: 50%;
+  /* 하트는 같은 크기의 원보다 작아 보여서 조금 크게 */
+  width: min(2.75rem, 100%);
+  aspect-ratio: 20 / 18.35;
   background: var(--accent-text);
+  -webkit-mask: var(--heart) center / contain no-repeat;
+  mask: var(--heart) center / contain no-repeat;
+  /* 하트는 위쪽이 넓어 눈으로 보는 중심이 위에 있다. 숫자가 그 중심에 오도록 하트를 살짝 내린다 */
+  translate: 0 6%;
 }
 
 .dday {
