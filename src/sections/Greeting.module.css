@@ -1,4 +1,10 @@
+/* 종이 청첩장처럼 제목과 본문 사이를 넉넉히 띄운다 */
+.body {
+  margin-top: var(--sp-6);
+}
+
 .text {
+  font-size: 0.9375rem;
   line-height: var(--lh-body);
 }
 
@@ -7,7 +13,8 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  column-gap: var(--sp-4);
+  /* 360px 폭 기기에서도 "정해균 · 전홍자의 아들"이 한 줄에 들어가도록 */
+  column-gap: var(--sp-3);
   margin-top: var(--sp-12);
 }
 

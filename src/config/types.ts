@@ -23,7 +23,7 @@ export interface Side {
   /** 영문 표기 (커버 타자기 문구, 인사말 필기체 타이틀에 사용) */
   en: { lastName: string; firstName: string };
   phone?: string;
-  /** 장남, 차남, 장녀 등 */
+  /** 아들, 딸, 장남, 장녀 등. "부모님 이름의 OO" 형태로 표시 */
   relation: string;
   father?: Parent;
   mother?: Parent;

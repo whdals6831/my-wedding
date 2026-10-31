@@ -22,13 +22,13 @@ export const wedding: WeddingConfig = {
     'share',
   ],
 
-  // TODO: relation(장남/차남 등)과 phone은 아직 샘플 값
+  // TODO: phone은 아직 샘플 값
   groom: {
     lastName: '정',
     firstName: '종민',
     en: { lastName: 'Jeong', firstName: 'Jongmin' },
     phone: '010-0000-0000',
-    relation: '장남',
+    relation: '아들',
     father: { name: '정해균', phone: '010-0000-0000' },
     mother: { name: '전홍자', phone: '010-0000-0000' },
   },
@@ -38,7 +38,7 @@ export const wedding: WeddingConfig = {
     firstName: '주혜',
     en: { lastName: 'Park', firstName: 'Juhye' },
     phone: '010-0000-0000',
-    relation: '장녀',
+    relation: '딸',
     father: { name: '박도윤', phone: '010-0000-0000' },
     mother: { name: '조은주', phone: '010-0000-0000' },
   },
@@ -67,10 +67,12 @@ export const wedding: WeddingConfig = {
   },
 
   greeting: {
+    // 종이 청첩장 문구. 휴대폰 폭(약 310px)에 맞춰 의미 단위로 줄을 나눴다
     text:
-      '서로의 하루를 궁금해하던 두 사람이\n이제 같은 하루를 함께 살아가려 합니다.\n\n' +
-      '늘 곁에서 아껴주신 고마운 분들을 모시고\n사랑의 약속을 하려 합니다.\n\n' +
-      '바쁘시더라도 귀한 걸음 하시어\n저희의 시작을 따뜻하게 축복해 주세요.',
+      '가을의 문턱에서 처음 마주한 두 사람이\n세 번의 겨울을 함께 건너,\n새해의 둘째 날 평생을 약속합니다.\n\n' +
+      '섬세하고 따뜻한 주혜와\n성실하고 다정한 종민이가\n이제 앞으로의 모든 계절을 함께하려 합니다.\n\n' +
+      '서툰 날에도 눈부신 날에도\n오늘의 마음을 잊지 않겠습니다.\n' +
+      '한 해의 첫 장을 여는 저희의 시작에\n따뜻한 축복으로 함께해 주세요.',
   },
 
   directions: {

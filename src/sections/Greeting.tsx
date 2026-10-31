@@ -14,12 +14,8 @@ export function Greeting() {
   const closeContact = useCallback(() => setContactOpen(false), []);
 
   return (
-    <Section
-      enTitle="Celebration of"
-      scriptTitle={`${groom.en.firstName} and ${bride.en.firstName}`}
-      title="소중한 분들을 초대합니다"
-    >
-      <Reveal>
+    <Section enTitle="Celebration of" scriptTitle={`${groom.en.firstName} and ${bride.en.firstName}`}>
+      <Reveal className={styles.body}>
         <MultilineText className={styles.text} text={greeting.text} />
       </Reveal>
       <Reveal delay={100} className={styles.family}>
@@ -43,23 +39,19 @@ function FamilyColumn({ side, role }: { side: Side; role: string }) {
 
   return (
     <p className={styles.side}>
-      <span className={styles.parents}>
-        {hasParents ? (
-          <>
-            {side.father && <ParentName parent={side.father} />}
-            {side.father && side.mother && (
-              <span className={styles.dot} aria-hidden="true">
-                ·
-              </span>
-            )}
-            {side.mother && <ParentName parent={side.mother} />}
-            <span className={styles.relation}>의 {side.relation}</span>
-          </>
-        ) : (
-          role
-        )}
-      </span>
-      <span className={styles.child}>{side.firstName}</span>
+      {hasParents && (
+        <span className={styles.parents}>
+          {side.father && <ParentName parent={side.father} />}
+          {side.father && side.mother && (
+            <span className={styles.dot} aria-hidden="true">
+              ·
+            </span>
+          )}
+          {side.mother && <ParentName parent={side.mother} />}
+          <span className={styles.relation}>의 {side.relation}</span>
+        </span>
+      )}
+      <span className={styles.child}>{`${role} ${side.lastName}${side.firstName}`}</span>
     </p>
   );
 }
