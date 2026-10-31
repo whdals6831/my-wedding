@@ -2,30 +2,40 @@
   line-height: var(--lh-body);
 }
 
+/* 신랑 | 신부 두 칸, 가운데 세로선 */
 .family {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: var(--sp-4);
+  margin-top: var(--sp-12);
+}
+
+.divider {
+  width: 1px;
+  height: 44px;
+  background: var(--text-sub);
+}
+
+.side {
   display: flex;
   flex-direction: column;
-  gap: var(--sp-4);
-  margin-top: var(--sp-10);
-  font-size: var(--fs-md);
+  align-items: center;
+  gap: var(--sp-1);
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: center;
-  column-gap: 0.45em;
+.parents {
+  font-size: var(--fs-sm);
+  line-height: 1.6;
 }
 
-.parents,
-.relation,
-.child {
+.parent,
+.relation {
   white-space: nowrap;
 }
 
 .dot {
-  margin-inline: 0.3em;
+  margin-inline: 0.25em;
   color: var(--text-sub);
 }
 
@@ -34,15 +44,12 @@
   color: var(--text-sub);
 }
 
-.relation {
-  font-size: var(--fs-sm);
-  color: var(--text-sub);
-}
-
 .child {
-  font-weight: 700;
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
 .contact {
-  margin-top: var(--sp-8);
+  margin-top: var(--sp-10);
 }

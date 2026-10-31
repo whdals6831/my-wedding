@@ -1,70 +1,66 @@
+/* 첫 화면 = 청첩장 앞면. 넉넉한 여백 가운데 작은 사진 한 장 */
 .cover {
-  padding-bottom: var(--sp-16);
+  --frame-w: min(76%, 39svh);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100svh;
+  padding: var(--sp-16) var(--section-px);
   text-align: center;
 }
 
-.photoWrap {
-  position: relative;
-}
-
-/* 사진 아래쪽을 배경색으로 부드럽게 녹인다 */
-.photoWrap::after {
-  content: '';
-  position: absolute;
-  inset: auto 0 0;
-  z-index: 1;
-  height: 18%;
-  background: linear-gradient(to bottom, rgb(255 255 255 / 0%), var(--bg));
-  pointer-events: none;
-}
-
-.photo {
-  max-height: 88svh;
-}
-
-/* 가로 모드 휴대폰에서 사진이 화면을 다 덮지 않게 */
-@media (orientation: landscape) and (max-height: 520px) {
-  .photo {
-    max-height: 75svh;
+@media (min-width: 481px) {
+  .cover {
+    min-height: calc(100svh - 2 * clamp(0px, 4vh, 40px));
   }
 }
 
+.typed {
+  width: var(--frame-w);
+  margin: 0 auto var(--sp-8);
+  font-family: var(--font-mono);
+  font-size: clamp(0.8125rem, 0.7rem + 0.5vw, 0.9375rem);
+  line-height: 1.5;
+  text-align: left;
+  color: var(--text);
+  animation: fade-up 1.2s 0.2s ease both;
+}
+
+.photo {
+  width: var(--frame-w);
+  margin-inline: auto;
+}
+
 .text {
-  padding: var(--sp-8) var(--section-px) 0;
-  animation: fade-up 1.2s 0.3s ease both;
+  margin-top: var(--sp-8);
+  animation: fade-up 1.2s 0.5s ease both;
 }
 
 .names {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   gap: var(--sp-3);
-  font-size: var(--fs-xl);
+  font-size: var(--fs-lg);
   font-weight: 400;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
 }
 
 .amp {
-  font-family: var(--font-en);
-  font-size: 1.2em;
-  font-style: italic;
-  color: var(--accent);
-}
-
-.date {
-  margin-top: var(--sp-4);
-  font-family: var(--font-en);
-  font-size: var(--fs-base);
-  /* Playfair 기본 숫자는 소문자 높이(old-style)라 작아 보이므로 대문자 높이로 맞춘다 */
-  font-variant-numeric: lining-nums;
-  letter-spacing: 0.1em;
-  color: var(--text-sub);
+  font-family: var(--font-script);
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .venue {
-  margin-top: var(--sp-1);
-  color: var(--text);
+  margin-top: var(--sp-2);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.08em;
+  color: var(--text-sub);
 }
 
 @keyframes fade-up {
@@ -75,6 +71,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .typed,
   .text {
     animation: none;
   }

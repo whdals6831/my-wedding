@@ -11,7 +11,7 @@ export function Accounts() {
   const { message, groom, bride } = wedding.accounts;
 
   return (
-    <Section enTitle="Account" title="마음 전하실 곳" tone="soft">
+    <Section enTitle="Account" title="마음 전하실 곳">
       <Reveal>
         <MultilineText className={styles.message} text={message} />
       </Reveal>

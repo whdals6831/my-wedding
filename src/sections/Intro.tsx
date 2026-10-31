@@ -8,7 +8,7 @@ export function Intro() {
   const { text, source } = wedding.intro;
 
   return (
-    <Section tone="soft">
+    <Section>
       <Reveal>
         <span className={styles.quote} aria-hidden="true">
           &ldquo;

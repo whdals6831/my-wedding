@@ -20,6 +20,8 @@ export interface Parent {
 export interface Side {
   lastName: string;
   firstName: string;
+  /** 영문 표기 (커버 타자기 문구, 인사말 필기체 타이틀에 사용) */
+  en: { lastName: string; firstName: string };
   phone?: string;
   /** 장남, 차남, 장녀 등 */
   relation: string;
@@ -59,6 +61,8 @@ export interface WeddingConfig {
   dateTime: string;
   venue: {
     name: string;
+    /** 커버 타자기 문구에 쓰는 영문 표기 */
+    enName: string;
     /** 지도 앱에서 검색어·도착지로 쓸 이름. 없으면 name 사용 */
     mapName?: string;
     hall: string;

@@ -26,6 +26,7 @@ export const wedding: WeddingConfig = {
   groom: {
     lastName: '정',
     firstName: '종민',
+    en: { lastName: 'Jeong', firstName: 'Jongmin' },
     phone: '010-0000-0000',
     relation: '장남',
     father: { name: '정해균', phone: '010-0000-0000' },
@@ -35,6 +36,7 @@ export const wedding: WeddingConfig = {
   bride: {
     lastName: '박',
     firstName: '주혜',
+    en: { lastName: 'Park', firstName: 'Juhye' },
     phone: '010-0000-0000',
     relation: '장녀',
     father: { name: '박도윤', phone: '010-0000-0000' },
@@ -45,6 +47,7 @@ export const wedding: WeddingConfig = {
 
   venue: {
     name: '루이비스웨딩홀',
+    enName: 'Louisvis Wedding Hall, Seoul',
     mapName: '루이비스 웨딩홀 중구점',
     hall: '한국경제신문사빌딩 18층 다산홀',
     address: '서울 중구 청파로 463 (중림동 441)',

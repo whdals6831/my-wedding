@@ -5,17 +5,13 @@
   text-align: center;
 }
 
-.section[data-tone='soft'] {
-  background: var(--bg-soft);
-}
-
-/* 같은 배경의 섹션이 이어질 때만 가운데 짧은 구분선 */
-.section[data-tone='default'] + .section[data-tone='default'][data-divider='true']::before {
+/* 섹션 사이 가운데 짧은 구분선 */
+.section + .section[data-divider='true']::before {
   content: '';
   position: absolute;
   top: 0;
   left: 50%;
-  width: 48px;
+  width: 40px;
   height: 1px;
   background: var(--line);
   transform: translateX(-50%);
@@ -26,19 +22,37 @@
 }
 
 .enTitle {
-  font-family: var(--font-en);
-  font-size: var(--fs-en-title);
-  font-style: italic;
+  /* 가운데 정렬 시 마지막 글자 뒤 자간만큼 왼쪽으로 쏠리는 것을 보정 */
+  padding-left: 0.5em;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
   font-weight: 400;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--accent);
+  line-height: 1.4;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.scriptTitle {
+  font-family: var(--font-script);
+  font-size: var(--fs-script);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.enTitle + .scriptTitle {
+  margin-top: var(--sp-4);
 }
 
 .title {
-  margin-top: var(--sp-2);
+  margin-top: var(--sp-3);
   font-size: var(--fs-sm);
   font-weight: 400;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   color: var(--text-sub);
+}
+
+.title:first-child {
+  margin-top: 0;
 }

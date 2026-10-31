@@ -2,10 +2,10 @@
   display: block;
   height: 0.6em;
   margin-bottom: var(--sp-4);
-  font-family: var(--font-en);
+  font-family: var(--font-script);
   font-size: 3rem;
   line-height: 1;
-  color: var(--accent);
+  color: var(--text);
 }
 
 .text {

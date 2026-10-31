@@ -2,7 +2,6 @@ const TIME_ZONE = 'Asia/Seoul';
 const DAY_MS = 86_400_000;
 
 export const WEEKDAYS_KO = ['일', '월', '화', '수', '목', '금', '토'];
-const WEEKDAYS_EN = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 const MONTHS_EN = [
   'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December',
@@ -47,11 +46,9 @@ export function toKst(date: Date): KstDate {
 const pad = (n: number) => String(n).padStart(2, '0');
 const hour12 = (hour: number) => hour % 12 || 12;
 
-/** 2027.05.15 SAT */
-export const formatDateDot = (d: KstDate) => `${d.year}.${pad(d.month)}.${pad(d.day)} ${WEEKDAYS_EN[d.weekday]}`;
-
-/** PM 12:30 */
-export const formatTimeEn = (d: KstDate) => `${d.hour < 12 ? 'AM' : 'PM'} ${hour12(d.hour)}:${pad(d.minute)}`;
+/** 2027.05.15 2:30PM */
+export const formatDateTimeDot = (d: KstDate) =>
+  `${d.year}.${pad(d.month)}.${pad(d.day)} ${hour12(d.hour)}:${pad(d.minute)}${d.hour < 12 ? 'AM' : 'PM'}`;
 
 /** 2027년 5월 15일 토요일 */
 export const formatDateKo = (d: KstDate) => `${d.year}년 ${d.month}월 ${d.day}일 ${WEEKDAYS_KO[d.weekday]}요일`;

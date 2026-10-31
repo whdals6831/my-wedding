@@ -65,7 +65,7 @@ export function Gallery() {
           slides={slides}
           controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}
           render={isMobile ? { buttonPrev: () => null, buttonNext: () => null } : undefined}
-          styles={{ container: { backgroundColor: 'rgb(28 20 20 / 94%)' } }}
+          styles={{ container: { backgroundColor: 'rgb(18 18 18 / 95%)' } }}
         />
       )}
     </Section>

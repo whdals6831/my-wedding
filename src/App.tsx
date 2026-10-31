@@ -22,8 +22,8 @@ export default function App() {
           style: {
             justifyContent: 'center',
             border: 'none',
-            borderRadius: '999px',
-            background: 'rgb(74 64 64 / 92%)',
+            borderRadius: '0',
+            background: 'rgb(31 31 31 / 92%)',
             color: '#fff',
             fontFamily: 'var(--font-ko)',
             fontSize: '0.875rem',

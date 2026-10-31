@@ -14,13 +14,18 @@ export function Greeting() {
   const closeContact = useCallback(() => setContactOpen(false), []);
 
   return (
-    <Section enTitle="Invitation" title="소중한 분들을 초대합니다" tone="soft">
+    <Section
+      enTitle="Celebration of"
+      scriptTitle={`${groom.en.firstName} and ${bride.en.firstName}`}
+      title="소중한 분들을 초대합니다"
+    >
       <Reveal>
         <MultilineText className={styles.text} text={greeting.text} />
       </Reveal>
       <Reveal delay={100} className={styles.family}>
-        <FamilyRow side={groom} role="신랑" />
-        <FamilyRow side={bride} role="신부" />
+        <FamilyColumn side={groom} role="신랑" />
+        <span className={styles.divider} aria-hidden="true" />
+        <FamilyColumn side={bride} role="신부" />
       </Reveal>
       <Reveal delay={150} className={styles.contact}>
         <button type="button" className="btn" onClick={() => setContactOpen(true)}>
@@ -33,23 +38,27 @@ export function Greeting() {
   );
 }
 
-function FamilyRow({ side, role }: { side: Side; role: string }) {
+function FamilyColumn({ side, role }: { side: Side; role: string }) {
   const hasParents = Boolean(side.father || side.mother);
 
   return (
-    <p className={styles.row}>
-      {hasParents && (
-        <span className={styles.parents}>
-          {side.father && <ParentName parent={side.father} />}
-          {side.father && side.mother && (
-            <span className={styles.dot} aria-hidden="true">
-              ·
-            </span>
-          )}
-          {side.mother && <ParentName parent={side.mother} />}
-        </span>
-      )}
-      <span className={styles.relation}>{hasParents ? `의 ${side.relation}` : role}</span>
+    <p className={styles.side}>
+      <span className={styles.parents}>
+        {hasParents ? (
+          <>
+            {side.father && <ParentName parent={side.father} />}
+            {side.father && side.mother && (
+              <span className={styles.dot} aria-hidden="true">
+                ·
+              </span>
+            )}
+            {side.mother && <ParentName parent={side.mother} />}
+            <span className={styles.relation}>의 {side.relation}</span>
+          </>
+        ) : (
+          role
+        )}
+      </span>
       <span className={styles.child}>{side.firstName}</span>
     </p>
   );
@@ -57,7 +66,7 @@ function FamilyRow({ side, role }: { side: Side; role: string }) {
 
 function ParentName({ parent }: { parent: Parent }) {
   return (
-    <span>
+    <span className={styles.parent}>
       {parent.deceased && <span className={styles.deceased}>故 </span>}
       {parent.name}
     </span>

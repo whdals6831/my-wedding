@@ -1,7 +1,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 4px;
+  gap: 2px;
 }
 
 .tile {
@@ -10,7 +10,7 @@
   width: 100%;
   aspect-ratio: 1;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: var(--radius);
   background: var(--ph-bg);
 }
 
