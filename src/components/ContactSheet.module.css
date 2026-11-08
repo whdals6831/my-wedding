@@ -4,7 +4,7 @@
 
 .groupTitle {
   padding-block: var(--sp-4) var(--sp-2);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-base);
   font-weight: 600;
   color: var(--accent-text);
 }
@@ -55,7 +55,6 @@
   justify-content: center;
   width: 44px;
   height: 44px;
-  border: 1px solid var(--line);
   border-radius: var(--radius);
   font-size: 18px;
   color: var(--accent-text);

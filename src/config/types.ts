@@ -73,6 +73,8 @@ export interface WeddingConfig {
     tel?: string;
     lat: number;
     lng: number;
+    /** 지도 화면의 가운데 좌표. 근처 역이 함께 보이도록 옮길 때 사용. 없으면 lat/lng */
+    mapCenter?: { lat: number; lng: number };
   };
   cover: {
     /** src/assets/photos/ 안의 파일명 */

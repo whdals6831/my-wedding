@@ -53,6 +53,8 @@ export const wedding: WeddingConfig = {
     tel: '02-312-6800',
     lat: 37.5601858,
     lng: 126.967097,
+    // 충정로역(2·5호선)이 좁은 휴대폰 화면에서도 함께 보이도록 서쪽으로 약 90m 옮김
+    mapCenter: { lat: 37.5601858, lng: 126.966097 },
   },
 
   cover: {

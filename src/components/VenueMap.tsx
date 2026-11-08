@@ -8,6 +8,8 @@ interface VenueMapProps {
   name: string;
   lat: number;
   lng: number;
+  /** 지도 가운데 좌표. 없으면 예식장 위치 */
+  center?: { lat: number; lng: number };
 }
 
 /** 카카오 키가 없거나 지도 로드에 실패하면 플레이스홀더를 보여준다 */
@@ -16,7 +18,7 @@ export function VenueMap(props: VenueMapProps) {
   return <KakaoVenueMap {...props} />;
 }
 
-function KakaoVenueMap({ name, lat, lng }: VenueMapProps) {
+function KakaoVenueMap({ name, lat, lng, center }: VenueMapProps) {
   const [loading, error] = useKakaoLoader({ appkey: KAKAO_JS_KEY });
   const [unlocked, setUnlocked] = useState(false);
 
@@ -29,8 +31,8 @@ function KakaoVenueMap({ name, lat, lng }: VenueMapProps) {
     <div>
       <div className={styles.frame}>
         <Map
-          center={position}
-          level={3}
+          center={center ?? position}
+          level={4}
           draggable={unlocked}
           zoomable={unlocked}
           scrollwheel={unlocked}

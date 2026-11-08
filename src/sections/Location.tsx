@@ -22,7 +22,7 @@ export function Location() {
       </Reveal>
 
       <Reveal className={styles.block}>
-        <VenueMap name={venue.name} lat={venue.lat} lng={venue.lng} />
+        <VenueMap name={venue.name} lat={venue.lat} lng={venue.lng} center={venue.mapCenter} />
       </Reveal>
 
       <Reveal className={styles.address}>
