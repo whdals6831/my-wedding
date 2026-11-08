@@ -29,13 +29,16 @@ export interface Side {
   mother?: Parent;
 }
 
-export interface Account {
+interface AccountBase {
   /** 신랑, 신랑 아버지 등 */
   label: string;
   holder: string;
-  bank: string;
-  number: string;
 }
+
+/** 계좌번호를 보여주는 줄, 또는 다른 분 계좌로 함께 받을 때 계좌 대신 안내 문구(note)를 보여주는 줄 */
+export type Account =
+  | (AccountBase & { bank: string; number: string })
+  | (AccountBase & { note: string });
 
 /** 분류가 붙는 줄. 길어서 넘어가면 본문은 분류 뒤에 맞춰 정렬된다 */
 export interface DirectionLine {

@@ -35,20 +35,26 @@ function AccountList({ accounts }: { accounts: Account[] }) {
   return (
     <ul className={styles.list}>
       {accounts.map((account) => (
-        <li key={`${account.label}-${account.number}`} className={styles.row}>
+        <li key={account.label} className={styles.row}>
           <div className={styles.info}>
             <p className={styles.who}>
               {account.label} <span className={styles.holder}>{account.holder}</span>
             </p>
-            <p className={styles.number}>
-              {account.bank} {account.number}
-            </p>
+            {'note' in account ? (
+              <p className={styles.note}>{account.note}</p>
+            ) : (
+              <p className={styles.number}>
+                {account.bank} {account.number}
+              </p>
+            )}
           </div>
-          <CopyButton
-            text={`${account.bank} ${account.number}`}
-            message="계좌번호가 복사되었습니다"
-            ariaLabel={`${account.label} ${account.holder} 계좌번호 복사`}
-          />
+          {!('note' in account) && (
+            <CopyButton
+              text={`${account.bank} ${account.number}`}
+              message="계좌번호가 복사되었습니다"
+              ariaLabel={`${account.label} ${account.holder} 계좌번호 복사`}
+            />
+          )}
         </li>
       ))}
     </ul>

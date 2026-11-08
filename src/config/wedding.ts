@@ -22,25 +22,24 @@ export const wedding: WeddingConfig = {
     'share',
   ],
 
-  // TODO: phone은 아직 샘플 값
   groom: {
     lastName: '정',
     firstName: '종민',
     en: { lastName: 'Jeong', firstName: 'Jongmin' },
-    phone: '010-0000-0000',
+    phone: '010-9133-6831',
     relation: '아들',
-    father: { name: '정해균', phone: '010-0000-0000' },
-    mother: { name: '전홍자', phone: '010-0000-0000' },
+    father: { name: '정해균', phone: '010-7151-2475' },
+    mother: { name: '전홍자', phone: '010-8618-6831' },
   },
 
   bride: {
     lastName: '박',
     firstName: '주혜',
     en: { lastName: 'Park', firstName: 'Juhye' },
-    phone: '010-0000-0000',
+    phone: '010-9011-9209',
     relation: '딸',
-    father: { name: '박도윤', phone: '010-0000-0000' },
-    mother: { name: '조은주', phone: '010-0000-0000' },
+    father: { name: '박도윤', phone: '010-4802-9209' },
+    mother: { name: '조은주', phone: '010-2019-7945' },
   },
 
   dateTime: '2027-01-02T14:30:00+09:00',
@@ -100,16 +99,16 @@ export const wedding: WeddingConfig = {
 
   accounts: {
     message: '참석이 어려우신 분들을 위해\n계좌번호를 함께 안내드립니다.\n너그러운 마음으로 양해 부탁드립니다.',
-    // TODO: 은행명과 계좌번호는 아직 샘플 값
     groom: [
-      { label: '신랑', holder: '정종민', bank: '○○은행', number: '000-000-000000' },
-      { label: '신랑 아버지', holder: '정해균', bank: '○○은행', number: '000-000-000000' },
-      { label: '신랑 어머니', holder: '전홍자', bank: '○○은행', number: '000-000-000000' },
+      { label: '신랑', holder: '정종민', bank: '농협', number: '60505656021088' },
+      { label: '신랑 아버지', holder: '정해균', bank: '농협', number: '60505652047471' },
+      { label: '신랑 어머니', holder: '전홍자', bank: '농협', number: '60505652053362' },
     ],
     bride: [
-      { label: '신부', holder: '박주혜', bank: '○○은행', number: '000-000-000000' },
-      { label: '신부 아버지', holder: '박도윤', bank: '○○은행', number: '000-000-000000' },
-      { label: '신부 어머니', holder: '조은주', bank: '○○은행', number: '000-000-000000' },
+      { label: '신부', holder: '박주혜', bank: '우리은행', number: '1002266531205' },
+      { label: '신부 아버지', holder: '박도윤', bank: 'iM뱅크(대구)', number: '13713067704' },
+      // 신부 아버지 계좌로 함께 받으므로 계좌번호 대신 안내 문구만 표시
+      { label: '신부 어머니', holder: '조은주', note: '신부 아버지 계좌로 함께 마음 전해 주세요' },
     ],
   },
 

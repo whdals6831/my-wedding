@@ -39,3 +39,9 @@
   margin-top: 2px;
   word-break: break-all;
 }
+
+.note {
+  margin-top: 2px;
+  font-size: var(--fs-sm);
+  color: var(--text-sub);
+}
