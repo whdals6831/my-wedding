@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
 import { PhotoPlaceholder } from '../components/Photo';
 import { Reveal } from '../components/Reveal';
@@ -63,8 +64,10 @@ export function Gallery() {
           index={Math.max(openIndex, 0)}
           close={() => setOpenIndex(-1)}
           slides={slides}
+          plugins={[Zoom]}
           controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}
-          render={isMobile ? { buttonPrev: () => null, buttonNext: () => null } : undefined}
+          // 모바일은 스와이프로 넘기고 핀치·더블탭으로 확대하므로 화살표·돋보기 버튼을 숨긴다
+          render={isMobile ? { buttonPrev: () => null, buttonNext: () => null, buttonZoom: () => null } : undefined}
           styles={{ container: { backgroundColor: 'rgb(18 18 18 / 95%)' } }}
         />
       )}
