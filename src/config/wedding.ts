@@ -104,7 +104,8 @@ export const wedding: WeddingConfig = {
     groom: [
       { label: '신랑', holder: '정종민', bank: '농협', number: '60505656021088' },
       { label: '신랑 아버지', holder: '정해균', bank: '농협', number: '60505652047471' },
-      { label: '신랑 어머니', holder: '전홍자', bank: '농협', number: '60505652053362' },
+      // 신랑 아버지 계좌로 함께 받으므로 계좌번호 대신 안내 문구만 표시
+      { label: '신랑 어머니', holder: '전홍자', note: '신랑 아버지 계좌로 함께 마음 전해 주세요' },
     ],
     bride: [
       { label: '신부', holder: '박주혜', bank: '우리은행', number: '1002266531205' },
