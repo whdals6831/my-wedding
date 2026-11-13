@@ -1,0 +1,75 @@
+.message {
+  font-size: 0.9375rem;
+  line-height: var(--lh-body);
+}
+
+/* 오시는 길과 같은 "분류 | 내용" 줄 */
+.info {
+  margin-top: var(--sp-10);
+  text-align: left;
+}
+
+.info dl,
+.info dd {
+  margin: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  align-items: center;
+  gap: var(--sp-3);
+  padding-block: var(--sp-5);
+  border-top: 1px solid var(--line);
+}
+
+.row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.label {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  line-height: 1.75;
+  text-align: center;
+  color: var(--accent-text);
+}
+
+.value {
+  line-height: 1.75;
+}
+
+.address {
+  display: block;
+  font-size: var(--fs-sm);
+  color: var(--text-sub);
+}
+
+.bus {
+  margin-top: var(--sp-10);
+  padding: var(--sp-6) var(--sp-5);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+}
+
+.busTitle {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--accent-text);
+}
+
+.busText {
+  margin-top: var(--sp-3);
+  line-height: 1.75;
+}
+
+.busNote {
+  margin-top: var(--sp-2);
+  font-size: var(--fs-sm);
+  color: var(--text-sub);
+}
+
+.busContact {
+  margin-top: var(--sp-5);
+}

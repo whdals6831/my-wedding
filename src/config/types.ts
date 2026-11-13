@@ -4,6 +4,7 @@ export type SectionKey =
   | 'calendar'
   | 'location'
   | 'directions'
+  | 'reception'
   | 'notice'
   | 'intro'
   | 'gallery'
@@ -91,6 +92,24 @@ export interface WeddingConfig {
     /** src/assets/photos/ 안의 약도 파일명. 없애면 약도 영역이 숨겨짐 */
     mapImage?: string;
     items: DirectionItem[];
+  };
+  /** 신랑측 피로연. 버스 문의 전화는 groom.father 번호를 쓴다 */
+  reception: {
+    title: string;
+    message: string;
+    /** 반드시 +09:00 오프셋 포함 */
+    start: string;
+    end: string;
+    venue: {
+      name: string;
+      address: string;
+    };
+    /** 없애면 대절버스 안내가 숨겨짐 */
+    bus?: {
+      title: string;
+      text: string;
+      note: string;
+    };
   };
   notice: {
     title: string;

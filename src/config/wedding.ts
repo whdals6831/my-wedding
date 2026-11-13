@@ -19,6 +19,7 @@ export const wedding: WeddingConfig = {
     'directions',
     'gallery',
     'accounts',
+    'reception',
     'share',
   ],
 
@@ -91,6 +92,26 @@ export const wedding: WeddingConfig = {
       },
       { title: '주차', lines: ['한국경제신문사빌딩 지하 주차장', '하객 2시간 무료'] },
     ],
+  },
+
+  reception: {
+    title: '신랑측 피로연 안내',
+    // 종이 안내장 문구. 휴대폰 폭(약 310px)에 맞춰 의미 단위로 줄을 나눴다
+    message:
+      '거리가 멀어 예식에 참석하시기\n어려운 분들을 위해 혼례에 앞서\n피로연 자리를 마련하였습니다.\n\n' +
+      '귀한 발걸음으로 두 사람의 앞날을\n축복하여 주시면\n더 큰 기쁨과 격려가 되겠습니다.',
+    start: '2026-12-19T11:00:00+09:00',
+    end: '2026-12-19T14:00:00+09:00',
+    venue: {
+      name: '석곡면 종합회관',
+      address: '전남광주 곡성군 석곡면 석곡로 69',
+    },
+    // 피로연 날이 아니라 예식 당일 서울로 가는 버스
+    bus: {
+      title: '신랑측 대절버스 안내',
+      text: '1월 2일 토요일 예식 당일\n오전 8시 석곡농협 앞 정시 출발',
+      note: '버스 타실 분은 미리 연락 주시기 바랍니다.',
+    },
   },
 
   notice: {

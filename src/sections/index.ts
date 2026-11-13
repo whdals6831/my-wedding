@@ -9,6 +9,7 @@ import { Greeting } from './Greeting';
 import { Intro } from './Intro';
 import { Location } from './Location';
 import { Notice } from './Notice';
+import { Reception } from './Reception';
 import { Share } from './Share';
 
 export const sectionRegistry: Record<SectionKey, ComponentType> = {
@@ -17,6 +18,7 @@ export const sectionRegistry: Record<SectionKey, ComponentType> = {
   calendar: Calendar,
   location: Location,
   directions: Directions,
+  reception: Reception,
   notice: Notice,
   intro: Intro,
   gallery: Gallery,
