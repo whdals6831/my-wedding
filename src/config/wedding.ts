@@ -19,6 +19,7 @@ export const wedding: WeddingConfig = {
     'directions',
     'gallery',
     'accounts',
+    'bus',
     'reception',
     'share',
   ],
@@ -94,6 +95,23 @@ export const wedding: WeddingConfig = {
     ],
   },
 
+  // 예식 당일 서울로 가는 버스
+  bus: {
+    groom: {
+      title: '신랑측 대절버스 안내',
+      departure: '2027-01-02T08:00:00+09:00',
+      place: '석곡농협 앞',
+      note: '버스 타실 분은 미리 연락 주시기 바랍니다.',
+    },
+    bride: {
+      title: '신부측 대절버스 안내',
+      departure: '2027-01-02T10:30:00+09:00',
+      place: '대구신월초등학교',
+      address: '대구 달서구 조암남로 100',
+      note: '버스 타실 분은 미리 연락 주시기 바랍니다.',
+    },
+  },
+
   reception: {
     title: '신랑측 피로연 안내',
     // 종이 안내장 문구. 휴대폰 폭(약 310px)에 맞춰 의미 단위로 줄을 나눴다
@@ -105,12 +123,6 @@ export const wedding: WeddingConfig = {
     venue: {
       name: '석곡면 종합회관',
       address: '전남광주 곡성군 석곡면 석곡로 69',
-    },
-    // 피로연 날이 아니라 예식 당일 서울로 가는 버스
-    bus: {
-      title: '신랑측 대절버스 안내',
-      text: '1월 2일 토요일 예식 당일\n오전 8시 석곡농협 앞 정시 출발',
-      note: '버스 타실 분은 미리 연락 주시기 바랍니다.',
     },
   },
 

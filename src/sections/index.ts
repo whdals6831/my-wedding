@@ -1,6 +1,7 @@
 import type { ComponentType } from 'react';
 import type { SectionKey } from '../config/types';
 import { Accounts } from './Accounts';
+import { Bus } from './Bus';
 import { Calendar } from './Calendar';
 import { Cover } from './Cover';
 import { Directions } from './Directions';
@@ -18,6 +19,7 @@ export const sectionRegistry: Record<SectionKey, ComponentType> = {
   calendar: Calendar,
   location: Location,
   directions: Directions,
+  bus: Bus,
   reception: Reception,
   notice: Notice,
   intro: Intro,

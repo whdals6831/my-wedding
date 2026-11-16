@@ -5,6 +5,7 @@ export type SectionKey =
   | 'location'
   | 'directions'
   | 'reception'
+  | 'bus'
   | 'notice'
   | 'intro'
   | 'gallery'
@@ -54,6 +55,18 @@ export interface DirectionItem {
   lines: (string | DirectionLine)[];
 }
 
+/** 예식 당일 대절버스 안내. "날짜 예식 당일 / 시각 정시 출발 / 장소" 순서로 표시 */
+export interface BusInfo {
+  title: string;
+  /** 출발 일시. 반드시 +09:00 오프셋 포함 */
+  departure: string;
+  /** 출발 장소 */
+  place: string;
+  /** 출발 장소 주소. 장소 바로 아래 작게 표시 */
+  address?: string;
+  note: string;
+}
+
 export interface WeddingConfig {
   /** 배포 주소 (끝에 / 포함). vite base 경로와 공유 링크에 사용 */
   siteUrl: string;
@@ -93,7 +106,12 @@ export interface WeddingConfig {
     mapImage?: string;
     items: DirectionItem[];
   };
-  /** 신랑측 피로연. 버스 문의 전화는 groom.father 번호를 쓴다 */
+  /** 대절버스. 문의 전화는 각 집 father 번호를 쓴다. 한쪽을 없애면 그쪽 박스만 숨겨짐 */
+  bus: {
+    groom?: BusInfo;
+    bride?: BusInfo;
+  };
+  /** 신랑측 피로연 */
   reception: {
     title: string;
     message: string;
@@ -103,12 +121,6 @@ export interface WeddingConfig {
     venue: {
       name: string;
       address: string;
-    };
-    /** 없애면 대절버스 안내가 숨겨짐 */
-    bus?: {
-      title: string;
-      text: string;
-      note: string;
     };
   };
   notice: {

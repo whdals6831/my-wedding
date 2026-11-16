@@ -1,0 +1,38 @@
+.box {
+  padding: var(--sp-6) var(--sp-5);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+}
+
+.title {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--accent-text);
+}
+
+.text {
+  margin-top: var(--sp-3);
+  line-height: 1.75;
+}
+
+/* 출발 장소 바로 아래 붙는 주소 */
+.address {
+  font-size: var(--fs-sm);
+  line-height: 1.75;
+  color: var(--text-sub);
+}
+
+.note {
+  margin-top: var(--sp-2);
+  font-size: var(--fs-sm);
+  color: var(--text-sub);
+}
+
+.address + .note {
+  margin-top: var(--sp-3);
+}
+
+.contact {
+  margin-top: var(--sp-5);
+}

@@ -44,32 +44,3 @@
   font-size: var(--fs-sm);
   color: var(--text-sub);
 }
-
-.bus {
-  margin-top: var(--sp-10);
-  padding: var(--sp-6) var(--sp-5);
-  border-radius: var(--radius);
-  background: var(--bg-soft);
-}
-
-.busTitle {
-  font-size: var(--fs-sm);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  color: var(--accent-text);
-}
-
-.busText {
-  margin-top: var(--sp-3);
-  line-height: 1.75;
-}
-
-.busNote {
-  margin-top: var(--sp-2);
-  font-size: var(--fs-sm);
-  color: var(--text-sub);
-}
-
-.busContact {
-  margin-top: var(--sp-5);
-}
