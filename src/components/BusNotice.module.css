@@ -23,6 +23,12 @@
   color: var(--text-sub);
 }
 
+/* 예식 후 돌아가는 버스 시각 */
+.return {
+  margin-top: var(--sp-2);
+  line-height: 1.75;
+}
+
 .note {
   margin-top: var(--sp-2);
   font-size: var(--fs-sm);

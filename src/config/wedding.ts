@@ -105,9 +105,9 @@ export const wedding: WeddingConfig = {
     },
     bride: {
       title: '신부측 대절버스 안내',
-      departure: '2027-01-02T10:30:00+09:00',
-      place: '대구신월초등학교',
-      address: '대구 달서구 조암남로 100',
+      departure: '2027-01-02T10:00:00+09:00',
+      place: '월배성당',
+      returnAt: '2027-01-02T17:00:00+09:00',
       note: '버스 타실 분은 미리 연락 주시기 바랍니다.',
     },
   },

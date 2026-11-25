@@ -1,4 +1,5 @@
 import type { BusInfo, Parent } from '../config/types';
+import { wedding } from '../config/wedding';
 import { formatTimeKo, toKst, WEEKDAYS_KO } from '../lib/date';
 import { isMobile } from '../lib/platform';
 import { CopyButton } from './CopyButton';
@@ -15,7 +16,7 @@ interface BusNoticeProps {
 }
 
 /**
- * 대절버스 안내 박스. 날짜 → 시각 정시 출발 → 장소(주소) 순서로 표시.
+ * 대절버스 안내 박스. 날짜 → 시각 정시 출발 → 장소(주소) → 복귀 시각 순서로 표시.
  * 모바일은 전화 걸기, PC는 번호 복사
  */
 export function BusNotice({ bus, contact, contactLabel }: BusNoticeProps) {
@@ -33,6 +34,11 @@ export function BusNotice({ bus, contact, contactLabel }: BusNoticeProps) {
         {bus.place}
       </p>
       {bus.address && <p className={styles.address}>{bus.address}</p>}
+      {bus.returnAt && (
+        <p className={styles.return}>
+          예식 후 {formatTimeKo(toKst(new Date(bus.returnAt)))} {wedding.venue.name}에서 복귀
+        </p>
+      )}
       <p className={styles.note}>{bus.note}</p>
       {phone &&
         (isMobile ? (

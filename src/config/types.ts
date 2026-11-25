@@ -64,6 +64,8 @@ export interface BusInfo {
   place: string;
   /** 출발 장소 주소. 장소 바로 아래 작게 표시 */
   address?: string;
+  /** 예식 후 예식장에서 돌아가는 버스 출발 일시. 반드시 +09:00 오프셋 포함. 없으면 복귀 안내를 숨김 */
+  returnAt?: string;
   note: string;
 }
 
